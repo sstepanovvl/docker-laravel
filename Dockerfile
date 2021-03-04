@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 # Install extensions
-RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
+RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl mysqli
 
 # Add user for laravel application
 RUN groupadd -g 1000 www
